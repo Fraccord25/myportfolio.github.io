@@ -484,3 +484,115 @@ img {
     width: 450px;
   }
 }
+
+/* Light Mode (default) */
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Dark Mode */
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.nav__logo, .nav__link, .section-title, .footer__title, .footer__copy {
+  color: #000;
+}
+
+body.dark-theme .nav__logo, 
+body.dark-theme .nav__link, 
+body.dark-theme .section-title, 
+body.dark-theme .footer__title, 
+body.dark-theme .footer__copy {
+  color: #ffffff;
+}
+
+/* Switch icon colors */
+.nav__mode i {
+  cursor: pointer;
+  font-size: 24px;
+  color: #000;
+}
+
+body.dark-theme .nav__mode i {
+  color: #ffffff;
+}
+
+
+/* Default Light Mode */
+.nav {
+  background-color: #fff;
+  color: #000;
+}
+
+.nav__link {
+  color: #000;
+}
+
+/* Dark Mode Styles */
+body.dark-theme .nav {
+  background-color: #333; /* Dark background for navigation */
+}
+
+body.dark-theme .nav__link {
+  color: #fff; /* Light color for navigation links */
+}
+
+body.dark-theme .nav__logo {
+  color: #fff; /* Light color for the logo */
+}
+
+body.dark-theme .nav__toggle i {
+  color: #fff; /* Light color for the toggle icon */
+}
+
+
+
+
+/* Default Icon Colors */
+.home__social-icon i {
+  color: #000; /* Default icon color for light mode */
+}
+
+/* Dark Mode for Social Media Icons */
+body.dark-theme .home__social-icon i {
+  color: #3498db; /* Change to blue in dark mode */
+}
+
+/* Optional: Add hover effect in dark mode */
+body.dark-theme .home__social-icon i:hover {
+  color: #2980b9; /* Darker blue when hovered in dark mode */
+}
+
+
+  body.dark-theme .l-header {
+    background-color: #333; /* Slightly darker background for mobile */   
+  }
+
+}
+
+
+
+
+.nav {
+  background-color: #fff;
+  color: #000; /* Teks navbar berwarna hitam di light mode */
+}
+
+.nav__link {
+  color: #000; /* Teks link navbar berwarna hitam di light mode */
+}
+
+/* Default Light Mode Menu */
+.nav__menu {
+  background-color: #fff; /* Background putih untuk light mode */
+  color: #000; /* Teks menu berwarna hitam */
+}
+
+/* Dark Mode Menu */
+body.dark-theme .nav__menu {
+  background-color: #333; /* Background gelap untuk dark mode */
+  color: #fff; /* Teks menu berwarna putih */
+}
