@@ -51,6 +51,37 @@ const sr = ScrollReveal({
 //     reset: true
 });
 
+// Mode Switch
+const modeSwitch = document.getElementById('nav-mode');
+const body = document.body;
+
+modeSwitch.addEventListener('click', () => {
+    // Toggle the "dark-theme" class on the body element
+    body.classList.toggle('dark-theme');
+
+    // Change the icon based on the current mode
+    const icon = modeSwitch.querySelector('i');
+    if (body.classList.contains('dark-theme')) {
+        icon.classList.replace('bx-moon', 'bx-sun');  // Change to sun icon for light mode switch
+    } else {
+        icon.classList.replace('bx-sun', 'bx-moon');  // Change to moon icon for dark mode switch
+    }
+
+    // Save the user's preference in localStorage
+    if (body.classList.contains('dark-theme')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+// Load saved theme from localStorage
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    body.classList.add('dark-theme');
+    modeSwitch.querySelector('i').classList.replace('bx-moon', 'bx-sun');
+}
+
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
