@@ -503,7 +503,7 @@ body.dark-theme {
 }
 
 .nav__logo, .nav__link, .section-title, .footer__title, .footer__copy {
-  color: #000;
+  color: #fff;
 }
 
 body.dark-theme .nav__logo, 
